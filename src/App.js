@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 import logo from './logo.svg';
 import './App.css';
 
@@ -53,7 +54,7 @@ class Submitbutton extends Component{
     render(){
         return(
             <div>
-              <br/>  <button>{this.props.fieldname}</button><br/>
+              <Button bsStyle="success" bsSize="small">{this.props.fieldname}</Button>
             </div>
         );
     }
@@ -86,7 +87,7 @@ var arr=[];
 
            handleSubmit(e){
             e.preventDefault();
-            alert(arr.toString);
+            alert(arr["first"]+ "\n" + arr["second"] +" \n" + arr["third"]);
           }
      
     
@@ -97,7 +98,51 @@ var arr=[];
            
             return (
                 <div>
-                    <form onSubmit={this.handleSubmit} method="GET">
+                
+                
+                
+       <form>
+          <div class="form-row justify-content-md-center">
+                
+            <div class="form-group col-md-2">
+              <label for="hiring_manager_id" class="col-form-label">Hiring Manager Id</label>
+              <input class="form-control" id="hiring_manager_id" placeholder="ID"></input>
+            </div>
+                
+                 <div class="form-group col-md-1"></div>
+                
+            <div class="form-group col-md-2">
+              <label for="inputPassword4" class="col-form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Password"></input>
+            </div>
+                
+              <div class="form-group col-md-1"></div>  
+                
+                <div class="form-group col-md-2">
+              <label for="inputPassword4" class="col-form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Password"></input>
+            </div>
+                 <div class="form-group col-md-1"></div>
+                
+                
+                <div class="form-group col-md-2">
+              <label for="inputPassword4" class="col-form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Password"></input>
+            </div>
+                
+                 
+                
+            </div>
+                
+              
+        
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+                
+                
+                
+                   
+                    <form action="http://www.google.co.in" onSubmit={this.handleSubmit} method="GET">
                     <Textboxwithlabel fieldname="first" whenupdate={this.updateFormValues}/>
                     <Textboxwithlabel fieldname="second" whenupdate={this.updateFormValues} />
                     <Textboxwithlabel fieldname="third" whenupdate={this.updateFormValues}/>
