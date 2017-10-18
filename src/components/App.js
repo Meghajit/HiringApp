@@ -3,8 +3,11 @@ import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 import logo from '../logo.svg';
 import '../App.css';
 import axios from 'axios';
+import LandingPageCard from './LandingPageCard';
 import Textboxwithlabel from "./Textboxwithlabel";
 import Textareawithlabel from "./Textareawithlabel";
+import { BrowserRouter } from 'react-router-dom'
+
 
 var arr=[];
 
@@ -12,7 +15,7 @@ class Submitbutton extends Component{
     render(){
         return(
             <div>
-              <button bsStyle="success" bsSize="small">{this.props.fieldname}</button>
+              <button bsStyle="success" bsSize="small"> {this.props.fieldname} </button>
             </div>
         );
     }
@@ -25,6 +28,7 @@ class Submitbutton extends Component{
        
         constructor(props) {
     super(props);
+  
     this.state = {
       ht:[]
     };
