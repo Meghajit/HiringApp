@@ -1,0 +1,147 @@
+           
+       <form onSubmit="http://google.co.in" method = "GET">
+          <div class="form-row justify-content-md-center">
+                
+            <div class="form-group col-md-2">
+              <label for="hiring_manager_id" class="col-form-label">Hiring Manager Id</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} classname="form-control input-sm" idname="hiring_manager_id" placeholdername="ID"/>
+            </div>
+                
+                 <div class="form-group col-md-1"></div>
+                
+            <div class="form-group col-md-2">
+              <label for="job_title" class="col-form-label">Job Title</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="job_title" placeholdername="Job Title"/>
+            </div>
+                
+              <div class="form-group col-md-1"></div>  
+                
+                <div class="form-group col-md-2">
+              <label for="LOB" class="col-form-label">Line Of Business</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="LOB" placeholdername="LOB"/>
+            </div>
+                 <div class="form-group col-md-1"></div>
+                
+                
+                <div class="form-group col-md-2">
+              <label for="employment_type" class="col-form-label">Employment Type</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="employment_type" placeholdername="Employment type"/>
+            </div>
+                  
+            </div>
+                
+                // 2nd row
+             <div class="form-row justify-content-md-center">
+                
+            <div class="form-group col-md-2">
+              <label for="duration" class="col-form-label">Duration</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="duration" placeholdername="Duration"/>
+            </div>
+                
+                 <div class="form-group col-md-1"></div>
+                
+            <div class="form-group col-md-2">
+              <label for="instance_no" class="col-form-label">Instance Number</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="instance_no" placeholdername="Instance No"/>
+            </div>
+                
+              <div class="form-group col-md-1"></div>  
+                
+                <div class="form-group col-md-2">
+              <label for="request_type" class="col-form-label">Request Type</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="request_type" placeholdername="Request Type"/>
+            </div>
+                
+                 <div class="form-group col-md-1"></div>
+                
+                
+                <div class="form-group col-md-2">
+              <label for="project_rate" class="col-form-label">Project Rate</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="project_rate" placeholdername="project_rate"/>
+            </div>
+                  
+            </div>
+                
+                // 3rd row
+                
+                 <div class="form-row justify-content-md-center">
+                
+            <div class="form-group col-md-2">
+              <label for="resource" class="col-form-label">Resource</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="resource" placeholdername="Resource"/>
+            </div>
+                
+                 <div class="form-group col-md-1"></div>
+                
+            <div class="form-group col-md-2">
+              <label for="proposed_rate" class="col-form-label">Proposed Rate</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="proposed_rate" placeholdername="Proposed Rate"/>
+            </div>
+                
+              <div class="form-group col-md-1"></div>  
+                
+                <div class="form-group col-md-2">
+              <label for="laptop" class="col-form-label">Laptop</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="laptop" placeholdername="Request Type"/>
+            </div>
+                
+                 <div class="form-group col-md-1"></div>
+                
+                
+                <div class="form-group col-md-2">
+              <label for="project_rate" class="col-form-label">Project Rate</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="project_rate" placeholdername="Project Rate"/>
+            </div>
+                  
+            </div>
+                
+                //4th row
+                
+                
+                 <div class="form-row justify-content-md-center">
+                
+            <div class="form-group col-md-2">
+              <label for="perm_savings" class="col-form-label">Permanent Savings</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="perm_savings" placeholdername="Perm Savings"/>
+            </div>
+                
+                 <div class="form-group col-md-1"></div>
+                
+            <div class="form-group col-md-2">
+              <label for="cphp" class="col-form-label">CP/ HP/ SoW</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues}  class="form-control" idname="cphp" placeholdername="CP / HP/ SoW"/>
+            </div>
+                
+              <div class="form-group col-md-1"></div>  
+                
+                <div class="form-group col-md-2">
+              <label for="pdfile" class="col-form-label">PD File Name</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="pdfile" placeholdername="PD File Name"/>
+            </div>
+                
+                 <div class="form-group col-md-1"></div>
+                
+                
+                <div class="form-group col-md-2">
+              <label for="project_rate" class="col-form-label">Project Rate</label>
+              <Textboxwithlabel whenupdate={this.updateFormValues} class="form-control" idname="project_rate" placeholdername="Project Rate"/>
+            </div>
+                  
+            </div>
+              
+                 <div class="form-row justify-content-md-center">
+                
+            <div class="form-group col-md-9">
+              <label for="comments" class="col-form-label">Comments</label>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+                </div>
+       
+                 <div class="form-row justify-content-md-center">
+                
+            <div class="form-group col-md-2">
+           <Submitbutton fieldname="Submit"   whenupdate={this.updateFormValues}/>
+            </div>
+                </div>
+              
+        </form>
