@@ -5,6 +5,7 @@ import App from './components/App';
 import LandingPage from './components/LandingPage';
 import Navibar from './components/Navibar';
 import LandingPageCard from './components/LandingPageCard';
+import PendingApprovals from './components/PendingApprovals';
 import registerServiceWorker from './registerServiceWorker';
 
 
