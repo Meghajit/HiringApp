@@ -1,12 +1,15 @@
 import React from "react"
 import { Navbar,Table,Nav,NavbarItems, NavItem,NavbarHeader,NavDropdown, MenuItem } from 'react-bootstrap';
-
+import axios from 'axios';
 
 class PendingApprovals extends React.Component {
     constructor(props) {
+     
    super(props);
-   
-  
+   this.state = {
+     htmlData:[],
+    pa:[]
+  };
  }
 
  componentDidMount(){
@@ -51,8 +54,8 @@ class PendingApprovals extends React.Component {
         </tr>
       </thead>
       <tbody>
-        
-        <tr>
+
+          <tr>
           <td>1</td>
           <td>Mark</td>
           <td>Otto</td>
@@ -65,4 +68,14 @@ class PendingApprovals extends React.Component {
 }
 }
 
+
+const Row = (dispData)=>{
+      dispData.info.forEach( (val) => {
+        Object.keys(val).map((childVal) => {
+          return(
+            <tr><td>{val[childVal]}</td><td>Mark</td><td>Otto</td><td>@mdo</td><td>shd</td></tr>
+          )
+        })
+  })
+}
 export default PendingApprovals;

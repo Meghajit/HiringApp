@@ -8,8 +8,22 @@ import LandingPageCard from './components/LandingPageCard';
 import PendingApprovals from './components/PendingApprovals';
 import registerServiceWorker from './registerServiceWorker';
 import Main from './components/Main'
+import MySidebar from './components/MySidebar';
 
+import {BrowserRouter, 
+    Route} from "react-router-dom"
+    
+import LoginAuth from "./components/LoginAuth"
 
-render(<PendingApprovals />, document.querySelector('#root'));
-//render(<Navibar />, document.getElementById('root'));
-registerServiceWorker();
+const Root = ()=>{
+return(
+    <BrowserRouter>
+    <div>
+        <Route exact path="/" component={App}/>
+        <Route exact path="/login" component={LoginAuth}/>
+    </div>
+    </BrowserRouter>
+)
+}
+
+render(<MySidebar />, document.querySelector('#root'))

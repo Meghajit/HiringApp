@@ -24,10 +24,11 @@ class Navibar extends React.Component {
     <Nav>
       <NavItem eventKey={1} href="#">About</NavItem>
       <NavItem eventKey={2} href="#">FAQ</NavItem>
-      <NavItem eventKey={3} href="#">Dashboard</NavItem>
-      <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-        <MenuItem eventKey={3.1}>Developers</MenuItem>
-        <MenuItem eventKey={3.2}>Policy</MenuItem>
+      <NavItem eventKey={3}  href="/login" >Login</NavItem>
+      <NavItem eventKey={4} href="#">Dashboard</NavItem>
+      <NavDropdown eventKey={4} title="Dropdown" id="basic-nav-dropdown">
+        <MenuItem eventKey={4.1}>Developers</MenuItem>
+        <MenuItem eventKey={4.2}>Policy</MenuItem>
       </NavDropdown>
     </Nav>
   </Navbar>
