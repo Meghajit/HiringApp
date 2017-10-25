@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import {Redirect} from "react-router-dom"
 
 class Login extends Component {
   constructor() {
@@ -24,6 +25,7 @@ class Login extends Component {
     return this.state.email.length > 0 && this.state.password.length > 0;
   }
   handleLoginSubmit(event) {
+    this.props.history.push("/home")
   }
 
   render() {
@@ -31,7 +33,7 @@ class Login extends Component {
       <div>
         <div className="login-container">
           <div className="login">
-            <div class="login-header"><h1>Login</h1></div>
+            <div className="login-header"><h1>Login</h1></div>
             <FormGroup controlId="email" bsSize="large">
               <ControlLabel>Email</ControlLabel>
               <FormControl autoFocus type="email" value={this.state.email} onChange={this.handleEmailChange} />

@@ -8,6 +8,7 @@ import {
   } from 'react-router-dom'
 
 import Login from "./Login"
+import LandingPageCard from './LandingPageCard';
 
 
 const LoginAuth = () => (
@@ -16,36 +17,13 @@ const LoginAuth = () => (
       <ul>
       </ul>
       <Route path="/login" component={Login}/>
-      <PrivateRoute path="/protected" component={Protected}/>
+      <PrivateRoute path="/protected" component={LandingPageCard} />
     </div>
   </Router>
 )
 
-const fakeAuth = {
-    isAuthenticated: false,
-    authenticate(cb) {
-      this.isAuthenticated = true
-      setTimeout(cb, 100) // fake async
-    },
-    signout(cb) {
-      this.isAuthenticated = false
-      setTimeout(cb, 100)
-    }
-  }
-  
-  const AuthButton = withRouter(({ history }) => (
-    fakeAuth.isAuthenticated ? (
-      <p>
-        Welcome! <button onClick={() => {
-          fakeAuth.signout(() => history.push('/'))
-        }}>Sign out</button>
-      </p>
-    ) : (
-      <p>You are not logged in.</p>
-    )
-  ))
-  
-  const PrivateRoute = ({ component: Component, ...rest }) => (
+const PrivateRoute = ({ component: Component, ...rest }) => {
+  return (
     <Route {...rest} render={props => (
       fakeAuth.isAuthenticated ? (
         <Component {...props}/>
@@ -57,7 +35,17 @@ const fakeAuth = {
       )
     )}/>
   )
-
-const Protected = () => <h3>Protected</h3>
+}
+const fakeAuth = {
+    isAuthenticated: true,
+    authenticate(cb) {
+      this.isAuthenticated = true
+      setTimeout(cb, 100) // fake async
+    },
+    signout(cb) {
+      this.isAuthenticated = false
+      setTimeout(cb, 100)
+    }
+  }
 
 export default LoginAuth

@@ -4,26 +4,28 @@ import './index.css';
 import App from './components/App';
 import LandingPage from './components/LandingPage';
 import Navibar from './components/Navibar';
-import LandingPageCard from './components/LandingPageCard';
 import PendingApprovals from './components/PendingApprovals';
 import registerServiceWorker from './registerServiceWorker';
 import Main from './components/Main'
-import MySidebar from './components/MySidebar';
 
 import {BrowserRouter, 
-    Route} from "react-router-dom"
+    Route, Switch} from "react-router-dom"
     
-import LoginAuth from "./components/LoginAuth"
+import Login from "./components/Login"
 
 const Root = ()=>{
 return(
     <BrowserRouter>
     <div>
-        <Route exact path="/" component={App}/>
-        <Route exact path="/login" component={LoginAuth}/>
+        <Switch>
+            <Route exact path="/" component={App}/>
+            <Route path="/login" component={Login}/>
+            <Route path="/home" component={LandingPage}/>
+            <Route component={render => <p>Not Found</p> } />
+        </Switch>
     </div>
     </BrowserRouter>
 )
 }
 
-render(<MySidebar />, document.querySelector('#root'))
+render(<Root />, document.querySelector('#root'))
