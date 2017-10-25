@@ -7,6 +7,7 @@ import Navibar from './components/Navibar';
 import PendingApprovals from './components/PendingApprovals';
 import registerServiceWorker from './registerServiceWorker';
 import Main from './components/Main'
+import NewRequest from "./components/NewRequest"
 
 import {BrowserRouter, 
     Route, Switch} from "react-router-dom"
@@ -17,10 +18,12 @@ const Root = ()=>{
 return(
     <BrowserRouter>
     <div>
+        <Route component={Navibar}/>
         <Switch>
             <Route exact path="/" component={App}/>
             <Route path="/login" component={Login}/>
             <Route path="/home" component={LandingPage}/>
+            <Route path="/newRequest" component={NewRequest}/>
             <Route component={render => <p>Not Found</p> } />
         </Switch>
     </div>

@@ -1,23 +1,21 @@
 import React from "react";
+import NewRequest from "./NewRequest"
 
 
 class LandingPageCard extends React.Component{
-    constructor(props) {
-        super(props);
-      }
-
+  
       render()
       {
           return(
-            <div class="col-xs-6">
-              <div class="card">
-                <div class="card-header">
+            <div className="col-xs-6">
+              <div className="card">
+                <div className="card-header">
                   {this.props.headername}
                 </div>
-                <div class="card-block">
-                  <h3 class="card-title">{this.props.cardtitle}</h3>
-                  <p class="card-text">{this.props.cardtext}</p>
-                  <a href="#">  <button type="button" onClick={this.props.func} class="btn btn-primary btn-lg btn-block">{this.props.buttontext}</button></a>
+                <div className="card-block">
+                  <h3 className="card-title">{this.props.cardtitle}</h3>
+                  <p className="card-text">{this.props.cardtext}</p>
+                  <a href="#">  <button type="button" onClick={this.props.navNewRequest} className="btn btn-primary btn-lg btn-block">{this.props.buttontext}</button></a>
                 </div>
               </div>
             </div>
