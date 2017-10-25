@@ -7,8 +7,9 @@ import Navibar from './components/Navibar';
 import LandingPageCard from './components/LandingPageCard';
 import PendingApprovals from './components/PendingApprovals';
 import registerServiceWorker from './registerServiceWorker';
+import Main from './components/Main'
 
 
-render(<LandingPage />, document.querySelector('#root'));
+render(<PendingApprovals />, document.querySelector('#root'));
 //render(<Navibar />, document.getElementById('root'));
 registerServiceWorker();
