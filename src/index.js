@@ -28,4 +28,4 @@ return(
 )
 }
 
-render(<Root />, document.querySelector('#root'))
+render(<PendingApprovals />, document.querySelector('#root'))
