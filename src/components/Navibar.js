@@ -18,14 +18,14 @@ class Navibar extends React.Component {
   <Navbar inverse>
     <Navbar.Header>
       <Navbar.Brand>
-        <a href="#">HPSE Hiring</a>
+        <a href="/main">HPSE Hiring</a>
       </Navbar.Brand>
     </Navbar.Header>
     <Nav>
       <NavItem eventKey={1} href="#">About</NavItem>
       <NavItem eventKey={2} href="#">FAQ</NavItem>
       <NavItem eventKey={3}  href="/login" >Login</NavItem>
-      <NavItem eventKey={4} href="/landing">Dashboard</NavItem>
+      <NavItem eventKey={4} href="/dashboard">Dashboard</NavItem>
       <NavDropdown eventKey={4} title="Dropdown" id="basic-nav-dropdown">
         <MenuItem eventKey={4.1}>Developers</MenuItem>
         <MenuItem eventKey={4.2}>Policy</MenuItem>

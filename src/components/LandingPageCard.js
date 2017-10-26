@@ -1,17 +1,15 @@
 import React from "react";
+import NewRequest from "./NewRequest"
 
 
 class LandingPageCard extends React.Component{
-    constructor(props) {
-        super(props);
-      }
-
+  
       render()
       {
           return(
-            <div class="col-xs-6">
-              <div class="card">
-                <div class="card-header">
+            <div className="col-xs-6">
+              <div className="card">
+                <div className="card-header">
                   {this.props.headername}
                 </div>
                 <div class="card-block">

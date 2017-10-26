@@ -17,10 +17,12 @@ const Root = ()=>{
 return(
     <BrowserRouter>
     <div>
+        <Route component={Navibar}/>
         <Switch>
-            <Route exact path="/" component={App}/>
+            <Route exact path ="/" component={Main} />
+            <Route exact path="/main" component={App}/>
             <Route path="/login" component={Login}/>
-            <Route path="/home" component={LandingPage}/>
+            <Route path="/dashboard" component={LandingPage}/>
             <Route path="/pendingApprovals" component={PendingApprovals} />
             <Route path = "/newRequests" component={NewRequest} />
             <Route component={render => <p>Not Found</p> } />
