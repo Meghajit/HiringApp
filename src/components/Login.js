@@ -25,7 +25,7 @@ class Login extends Component {
     return this.state.email.length > 0 && this.state.password.length > 0;
   }
   handleLoginSubmit(event) {
-    this.props.history.push("/home")
+    this.props.history.push("/dashboard")
   }
 
   render() {
