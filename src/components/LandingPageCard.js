@@ -17,7 +17,7 @@ class LandingPageCard extends React.Component{
                 <div class="card-block">
                   <h3 class="card-title">{this.props.cardtitle}</h3>
                   <p class="card-text">{this.props.cardtext}</p>
-                  <a href="#">  <button type="button" onClick={this.props.func} class="btn btn-primary btn-lg btn-block">{this.props.buttontext}</button></a>
+                  <a href={this.props.link}>  <button type="button" class="btn btn-primary btn-lg btn-block">{this.props.buttontext}</button></a>
                 </div>
               </div>
             </div>
