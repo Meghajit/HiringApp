@@ -5,6 +5,8 @@ import App from './components/App';
 import LandingPage from './components/LandingPage';
 import Navibar from './components/Navibar';
 import PendingApprovals from './components/PendingApprovals';
+import PendingRequest from './components/PendingRequest';
+import TitlePage from './components/TitlePage';
 import registerServiceWorker from './registerServiceWorker';
 import Main from './components/Main'
 
@@ -24,7 +26,9 @@ return(
             <Route path="/login" component={Login}/>
             <Route path="/dashboard" component={LandingPage}/>
             <Route path="/pendingApprovals" component={PendingApprovals} />
+            <Route path="/pendingRequest" component={PendingRequest} />
             <Route path = "/newRequests" component={NewRequest} />
+
             <Route component={render => <p>Not Found</p> } />
         </Switch>
     </div>
@@ -32,4 +36,4 @@ return(
 )
 }
 
-render(<Root />, document.querySelector('#root'))
+render(<TitlePage />, document.querySelector('#root'))

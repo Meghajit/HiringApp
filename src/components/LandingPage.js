@@ -17,7 +17,7 @@ class LandingPage extends React.Component {
         <div class="container">
             <div class="row">
                 <LandingPageCard  link = "/pendingApprovals"  headername="Pending Approvals" cardtitle="Pending Approvals" cardtext="Pending Approvals" buttontext="Pending Approvals" />
-                <LandingPageCard headername="Pending Requests" cardtitle="Pending Requests" cardtext="Pending Request" buttontext="Pending Request" />
+                <LandingPageCard link = "/pendingRequest" headername="Pending Requests" cardtitle="Pending Requests" cardtext="Pending Request" buttontext="Pending Request" />
             </div>
             <br /><br />
             <div className="row">

@@ -21,7 +21,7 @@ class Textboxwithlabel extends React.Component {
                    return(
                        <div>
                            <label htmlFor={this.props.fieldName}></label>
-                           <input type="text" id={this.props.fieldname} value={this.state.value} onChange={this.delta}></input>
+                           <input {...this.props.mandatory} type="text"  id={this.props.fieldname} value={this.state.value} onChange={this.delta}></input>
                        </div>
            
                    );
