@@ -6,7 +6,6 @@ import LandingPage from './components/LandingPage';
 import Navibar from './components/Navibar';
 import PendingApprovals from './components/PendingApprovals';
 import PendingRequest from './components/PendingRequest';
-import TitlePage from './components/TitlePage';
 import registerServiceWorker from './registerServiceWorker';
 import Main from './components/Main'
 
@@ -36,4 +35,4 @@ return(
 )
 }
 
-render(<TitlePage />, document.querySelector('#root'))
+render(<Root />, document.querySelector('#root'))
