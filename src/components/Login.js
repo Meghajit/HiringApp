@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import { Button, FormGroup, FormControl, ControlLabel, Image, Form } from "react-bootstrap";
 import {Redirect} from "react-router-dom"
+import {browserHistory} from "react-router";
+import axios from 'axios';
 import telstra from '../images/telstra-title.png';
 
 class Login extends Component {
@@ -12,7 +14,8 @@ class Login extends Component {
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      res:""
     }
   }
 
@@ -25,15 +28,38 @@ class Login extends Component {
   validateForm() {
     return this.state.email.length > 0 && this.state.password.length > 0;
   }
+
+
+
   handleLoginSubmit(event) {
-    this.props.history.push("/dashboard")
+    debugger;
+    console.log("heeheh");
+    console.log(this);
+    event.preventDefault();
+    var self=this;
+   
+
+    axios.post('http://localhost:5000/api/auth', {
+      "email":self.state.email,
+      "pass":self.state.password,
+    })
+    .then(function (response) {
+ 
+        console.log(response);
+        if(response.data.responseCode=="1")
+          self.props.history.push("/dashboard")
+      
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+
   }
 
   render() {
     return (
-      <div>
-        <Image src={telstra} width="1400px"/>
-      {/* <div>
+       <div>
         <Image src={telstra} width="1400px"/>
         <div className="login-container">
           <div className="login">
@@ -51,29 +77,8 @@ class Login extends Component {
           </div>
         </div>
       </div>
-      <div> */}
+
       
-      <div >
-        <br></br>
-      <Form inline align="center">
-      <FormGroup controlId="formInlineName">
-        <ControlLabel>User Name</ControlLabel>
-        {' '}
-        <FormControl type="text" placeholder="User Name" value={this.state.email} onChange={this.handleEmailChange}/>
-      </FormGroup>
-      {' '}
-      <FormGroup controlId="formInlineEmail">
-        <ControlLabel>Password</ControlLabel>
-        {' '}
-        <FormControl type="password" placeholder="password" value={this.state.password} onChange={this.handlePasswordChange} />
-      </FormGroup>
-      {' '}
-      <Button type="submit" bsStyle="info"  disabled={!this.validateForm()} onClick={this.handleLoginSubmit}>
-        Login
-      </Button>
-    </Form>
-    </div>
-    </div>
     )
   }
 }

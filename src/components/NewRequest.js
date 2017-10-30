@@ -49,6 +49,7 @@ class NewRequest extends Component {
 
 
   handleSubmit(e) {
+
     console.log("HEHEEHE");
     e.preventDefault();
     //var str="{";
@@ -104,28 +105,28 @@ class NewRequest extends Component {
 
             <div className="form-group col-md-2">
               <label for="hiring_manager_id" className="col-form-label">Hiring Manager Id</label>
-              <Textboxwithlabel fieldname="hiring_manager_id" whenupdate={this.updateFormValues} classname="form-control input-sm" idname="hiring_manager_id" placeholdername="ID" />
+              <Textboxwithlabel mandatory="required"  fieldname="hiring_manager_id" whenupdate={this.updateFormValues} classname="form-control input-sm" idname="hiring_manager_id" placeholdername="ID" />
             </div>
 
             <div className="form-group col-md-1"></div>
 
             <div className="form-group col-md-2">
               <label for="job_title" className="col-form-label">Job Title</label>
-              <Textboxwithlabel fieldname="job_title" whenupdate={this.updateFormValues} className="form-control" idname="job_title" placeholdername="Job Title" />
+              <Textboxwithlabel mandatory="required"  fieldname="job_title" whenupdate={this.updateFormValues} className="form-control" idname="job_title" placeholdername="Job Title" />
             </div>
 
             <div className="form-group col-md-1"></div>
 
             <div className="form-group col-md-2">
               <label for="LOB" className="col-form-label">Line Of Business</label>
-              <Textboxwithlabel fieldname="lob" whenupdate={this.updateFormValues} className="form-control" idname="LOB" placeholdername="LOB" />
+              <Textboxwithlabel mandatory="required"  fieldname="lob" whenupdate={this.updateFormValues} className="form-control" idname="LOB" placeholdername="LOB" />
             </div>
             <div className="form-group col-md-1"></div>
 
 
             <div className="form-group col-md-2">
               <label for="employment_type" className="col-form-label">Employment Type</label>
-              <Textboxwithlabel fieldname="employment_type" whenupdate={this.updateFormValues} className="form-control" idname="employment_type" placeholdername="Employment type" />
+              <Textboxwithlabel mandatory="required"  fieldname="employment_type" whenupdate={this.updateFormValues} className="form-control" idname="employment_type" placeholdername="Employment type" />
             </div>
 
           </div>
@@ -135,21 +136,21 @@ class NewRequest extends Component {
 
             <div className="form-group col-md-2">
               <label for="duration" className="col-form-label">Duration</label>
-              <Textboxwithlabel fieldname="duration" whenupdate={this.updateFormValues} className="form-control" idname="duration" placeholdername="Duration" />
+              <Textboxwithlabel mandatory="required"  fieldname="duration" whenupdate={this.updateFormValues} className="form-control" idname="duration" placeholdername="Duration" />
             </div>
 
             <div className="form-group col-md-1"></div>
 
             <div className="form-group col-md-2">
               <label for="instance_no" className="col-form-label">Instance Number</label>
-              <Textboxwithlabel fieldname="instance_no" whenupdate={this.updateFormValues} className="form-control" idname="instance_no" placeholdername="Instance No" />
+              <Textboxwithlabel mandatory="required"  fieldname="instance_no" whenupdate={this.updateFormValues} className="form-control" idname="instance_no" placeholdername="Instance No" />
             </div>
 
             <div className="form-group col-md-1"></div>
 
             <div className="form-group col-md-2">
               <label for="request_type" className="col-form-label">Request Type</label>
-              <Textboxwithlabel fieldname="request_type" whenupdate={this.updateFormValues} className="form-control" idname="request_type" placeholdername="Request Type" />
+              <Textboxwithlabel mandatory="required"  fieldname="request_type" whenupdate={this.updateFormValues} className="form-control" idname="request_type" placeholdername="Request Type" />
             </div>
 
             <div className="form-group col-md-1"></div>
@@ -157,49 +158,49 @@ class NewRequest extends Component {
 
             <div className="form-group col-md-2">
               <label for="project_rate" className="col-form-label">Project Rate</label>
-              <Textboxwithlabel fieldname="project_rate" whenupdate={this.updateFormValues} className="form-control" idname="project_rate" placeholdername="project_rate" />
+              <Textboxwithlabel mandatory=""  fieldname="project_rate" whenupdate={this.updateFormValues} className="form-control" idname="project_rate" placeholdername="project_rate" />
             </div>
           </div>
           <div className="form-row justify-content-md-center">
             <div className="form-group col-md-2">
               <label for="resource" className="col-form-label">Resource</label>
-              <Textboxwithlabel fieldname="resource" whenupdate={this.updateFormValues} className="form-control" idname="resource" placeholdername="Resource" />
+              <Textboxwithlabel mandatory="required"  fieldname="resource" whenupdate={this.updateFormValues} className="form-control" idname="resource" placeholdername="Resource" />
             </div>
             <div className="form-group col-md-1"></div>
             <div className="form-group col-md-2">
               <label for="proposed_rate" className="col-form-label">Proposed Rate</label>
-              <Textboxwithlabel fieldname="proposed_rate" whenupdate={this.updateFormValues} className="form-control" idname="proposed_rate" placeholdername="Proposed Rate" />
+              <Textboxwithlabel mandatory="required"  fieldname="proposed_rate" whenupdate={this.updateFormValues} className="form-control" idname="proposed_rate" placeholdername="Proposed Rate" />
             </div>
             <div className="form-group col-md-1"></div>
             <div className="form-group col-md-2">
               <label for="laptop" className="col-form-label">Laptop</label>
-              <Textboxwithlabel fieldname="laptop" whenupdate={this.updateFormValues} className="form-control" idname="laptop" placeholdername="Request Type" />
+              <Textboxwithlabel mandatory=""  fieldname="laptop" whenupdate={this.updateFormValues} className="form-control" idname="laptop" placeholdername="Request Type" />
             </div>
             <div className="form-group col-md-1"></div>
             <div className="form-group col-md-2">
               <label for="project_rate" className="col-form-label">Project Rate</label>
-              <Textboxwithlabel fieldname="project_rate" whenupdate={this.updateFormValues} className="form-control" idname="project_rate" placeholdername="Project Rate" />
+              <Textboxwithlabel mandatory=""  fieldname="project_rate" whenupdate={this.updateFormValues} className="form-control" idname="project_rate" placeholdername="Project Rate" />
             </div>
           </div>
           <div className="form-row justify-content-md-center">
             <div className="form-group col-md-2">
               <label for="perm_savings" className="col-form-label">Permanent Savings</label>
-              <Textboxwithlabel fieldname="perm_savings" whenupdate={this.updateFormValues} className="form-control" idname="perm_savings" placeholdername="Perm Savings" />
+              <Textboxwithlabel mandatory="required"  fieldname="perm_savings" whenupdate={this.updateFormValues} className="form-control" idname="perm_savings" placeholdername="Perm Savings" />
             </div>
             <div className="form-group col-md-1"></div>
             <div className="form-group col-md-2">
               <label for="cphp" className="col-form-label">CP/ HP/ SoW</label>
-              <Textboxwithlabel fieldname="cP_hP_hSoW" whenupdate={this.updateFormValues} className="form-control" idname="cphp" placeholdername="CP / HP/ SoW" />
+              <Textboxwithlabel mandatory="required"  fieldname="cP_hP_hSoW" whenupdate={this.updateFormValues} className="form-control" idname="cphp" placeholdername="CP / HP/ SoW" />
             </div>
             <div className="form-group col-md-1"></div>
             <div className="form-group col-md-2">
               <label for="pdfile" className="col-form-label">PD File Name</label>
-              <Textboxwithlabel fieldname="pd_file_name" whenupdate={this.updateFormValues} className="form-control" idname="pdfile" placeholdername="PD File Name" />
+              <Textboxwithlabel mandatory="required"  fieldname="pd_file_name" whenupdate={this.updateFormValues} className="form-control" idname="pdfile" placeholdername="PD File Name" />
             </div>
             <div className="form-group col-md-1"></div>
             <div className="form-group col-md-2">
               <label for="indicative_po_value" className="col-form-label">Indicative PO Value</label>
-              <Textboxwithlabel fieldname="indicative_po_value" whenupdate={this.updateFormValues} className="form-control" idname="indicative_po_value" placeholdername="Indicative PO Value" />
+              <Textboxwithlabel mandatory="required"  fieldname="indicative_po_value" whenupdate={this.updateFormValues} className="form-control" idname="indicative_po_value" placeholdername="Indicative PO Value" />
             </div>
           </div>
           <div className="form-row justify-content-md-center ">
