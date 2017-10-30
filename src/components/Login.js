@@ -59,25 +59,27 @@ class Login extends Component {
 
   render() {
     return (
-       <div>
-        <Image src={telstra} width="1400px"/>
-        <div className="login-container">
-          <div className="login">
-            <div className="login-header"><h1>Login</h1></div>
-            <FormGroup controlId="email" bsSize="large">
-              <ControlLabel>Email</ControlLabel>
-              <FormControl autoFocus type="email" value={this.state.email} onChange={this.handleEmailChange} />
-            </FormGroup>
-            <FormGroup controlId="password" bsSize="large">
-              <ControlLabel>Password</ControlLabel>
-              <FormControl value={this.state.password} onChange={this.handlePasswordChange} type="password" />
-            </FormGroup>
-            <Button block bsSize="large" bsStyle="info"
-              disabled={!this.validateForm()} type="submit" onClick={this.handleLoginSubmit} >Login </Button>
-          </div>
-        </div>
-      </div>
-
+      <div >
+         <Image src={telstra} width="1400px"/>
+        <br/><br/>
+      <Form inline align="center" >
+      <FormGroup controlId="email">
+        <ControlLabel>User Name</ControlLabel>
+        {' '}
+        <FormControl type="text" placeholder="User Name" value={this.state.email} onChange={this.handleEmailChange}/>
+      </FormGroup>
+      {' '}
+      <FormGroup controlId="password">
+        <ControlLabel>Password</ControlLabel>
+        {' '}
+        <FormControl type="password" placeholder="password" value={this.state.password} onChange={this.handlePasswordChange} />
+      </FormGroup>
+      {' '}
+      <Button type="submit" bsStyle="info"  disabled={!this.validateForm()} onClick={this.handleLoginSubmit}>
+        Login
+      </Button>
+    </Form>
+    </div>
       
     )
   }

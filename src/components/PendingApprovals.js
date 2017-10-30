@@ -13,12 +13,12 @@ class PendingApprovals extends React.Component {
 
   componentDidMount() {
     const self = this;
-    axios.get('http://localhost:5000/api/approve', {
+    axios.get('http://localhost:5000/api/pending', {
       params: {
         userID: 'b64bfe4d-9886-4282-9eea-dc2f2ad5d9b5'
       }
     }).then(function (response) {
-        debugger;
+    
         if (response.data.responseCode == "1") {
           const pa = { ...self.state.pa }
           self.setState({ pa: response.data.info });
