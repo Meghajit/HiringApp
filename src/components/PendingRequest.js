@@ -1,5 +1,5 @@
 import React from "react"
-import { Navbar,Table,Nav,NavbarItems,hero,wwewe, NavItem,NavbarHeader,NavDropdown,Button, MenuItem } from 'react-bootstrap';
+import { Navbar,Table,Nav,NavbarItems,hero, NavItem,NavbarHeader,NavDropdown,Button, MenuItem } from 'react-bootstrap';
 import axios from 'axios';
 
 class PendingRequest extends React.Component {
@@ -32,15 +32,15 @@ class PendingRequest extends React.Component {
   render() {
     var srCode = 0;
     return (
-      <Table striped bordered condensed hover>
+      <Table striped bordered responsive condensed hover>
         <thead>
           <tr>
             <th>Serial Number</th>
             <th>Request Id</th>
             <th>Role</th>
-            <th>1-Up Manager Approval</th>
-            <th>Peter Corrigan Approval</th>
-            <th>Craig Marrow Approval</th>
+            <th>1-Up Manager Approval</th>  
+            <th>Aruna Approval</th>
+            <th>Peter Approval</th>
           </tr>
         </thead>
         <tbody>
@@ -59,19 +59,30 @@ class PendingRequest extends React.Component {
 
 const RenderTable = (props)=>{
   const {val : arr, srCode} = props
-  var buttonTodisplay;
+  var oneUpButton, arunaButton, peterButton;
 
-  for(var i=3;i<=5;i++)
-  {
-    if(arr[i]==0) // Pending
-    buttonTodisplay=  <Button bsStyle="success" bsSize="large" block>Approved</Button>
+  
+    if(arr[3]==1) // Pending One up
+    oneUpButton=  <Button bsStyle="success"  >Approved</Button>
   else
-    buttonTodisplay=  <Button bsStyle="danger" bsSize="large" block>Pending</Button>
-  }
+    oneUpButton=  <Button bsStyle="warning"  >Pending</Button>
+
+    if(arr[0]==1) // Pending Aruna
+    arunaButton=  <Button bsStyle="success"  >Approved</Button>
+  else
+    arunaButton=  <Button bsStyle="warning"  >Pending</Button>
+
+    if(arr[4]==1) // Pending Peter
+    peterButton=  <Button bsStyle="success"  >Approved</Button>
+  else
+    peterButton=  <Button bsStyle="warning"  >Pending</Button>
+
+
+  
  
     
   return (
-    <tr><td >Hello</td><td>Hello</td><td>Hello</td><td >Hello</td><td >Hello</td><td>{buttonTodisplay}</td></tr>
+    <tr><td >{srCode}</td><td>{arr[5]}</td><td>{arr[2]}</td><td >{oneUpButton}</td><td >{ arunaButton}</td><td>{peterButton}</td></tr>
   )
 }
 

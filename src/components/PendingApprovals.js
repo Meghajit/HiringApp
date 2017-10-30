@@ -13,7 +13,7 @@ class PendingApprovals extends React.Component {
 
   componentDidMount() {
     const self = this;
-    axios.get('http://localhost:5000/api/pending', {
+    axios.get('http://localhost:5000/api/approve', {
       params: {
         userID: 'b64bfe4d-9886-4282-9eea-dc2f2ad5d9b5'
       }

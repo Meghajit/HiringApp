@@ -20,8 +20,8 @@ return(
     <div>
         <Route component={Navibar}/>
         <Switch>
-            <Route exact path ="/" component={Main} />
-            <Route exact path="/main" component={App}/>
+            <Route exact path ="/" component={Login} />
+            <Route exact path="/main" component={Login}/>
             <Route path="/login" component={Login}/>
             <Route path="/dashboard" component={LandingPage}/>
             <Route path="/pendingApprovals" component={PendingApprovals} />
@@ -35,4 +35,4 @@ return(
 )
 }
 
-render(<Root />, document.querySelector('#root'))
+render(<Root />, document.querySelector('#app'))
