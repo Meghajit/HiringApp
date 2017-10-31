@@ -1,6 +1,6 @@
 import React from "react"
 
-class Textareawithlabel extends React.Component {
+class SelectorField extends React.Component {
     constructor(props) {
    super(props);
    this.state = {
@@ -18,14 +18,19 @@ class Textareawithlabel extends React.Component {
            }
            
            render(){
+                   
                    return(
                        <div>
                            <label htmlFor={this.props.fieldName}></label>
-                           <textarea required rows ={this.props.rows} cols={this.props.cols} id={this.props.fieldname} value={this.state.value} onChange={this.delta}></textarea>
+                                <select autofocus required  id={this.props.fieldname} value={this.state.value} onChange={this.delta}>
+                                    <option value="cp">CP</option>
+                                    <option value="hp">HP</option>
+                                    <option value="sow">SOW</option>
+                                 </select>
                        </div>
            
                    );
            }   
 }
 
-export default Textareawithlabel;
+export default SelectorField;

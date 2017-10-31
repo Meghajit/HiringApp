@@ -18,7 +18,6 @@ class PendingRequest extends React.Component {
         userID: 'b64bfe4d-9886-4282-9eea-dc2f2ad5d9b5'
       }
     }).then(function (response) {
-        debugger;
         if (response.data.responseCode == "1") {
           const pr = { ...self.state.pr }
           self.setState({ pr: response.data.info });

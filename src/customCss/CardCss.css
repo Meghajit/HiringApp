@@ -1,0 +1,11 @@
+.card {
+    border: solid;
+    border-width: 1px;
+    padding: 5px;
+}
+
+#navbar-logo {
+    margin-top: -6px;
+    margin-left: -90px;
+}
+

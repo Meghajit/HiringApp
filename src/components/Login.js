@@ -32,7 +32,6 @@ class Login extends Component {
 
 
   handleLoginSubmit(event) {
-    debugger;
     console.log("heeheh");
     console.log(this);
     event.preventDefault();
@@ -60,7 +59,7 @@ class Login extends Component {
   render() {
     return (
       <div >
-         <Image src={telstra} width="1400px"/>
+         <Image src={telstra} width="1400px" />
         <br/><br/>
       <Form inline align="center" >
       <FormGroup controlId="email">

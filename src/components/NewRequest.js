@@ -7,7 +7,7 @@ import LandingPageCard from './LandingPageCard';
 import Textboxwithlabel from "./Textboxwithlabel";
 import Textareawithlabel from "./Textareawithlabel";
 import { BrowserRouter } from 'react-router-dom'
-
+import SelectorField from './SelectorField';
 
 var arr = [];
 
@@ -163,8 +163,8 @@ class NewRequest extends Component {
           </div>
           <div className="form-row justify-content-md-center">
             <div className="form-group col-md-2">
-              <label for="resource" className="col-form-label">Resource</label>
-              <Textboxwithlabel mandatory="required"  fieldname="resource" whenupdate={this.updateFormValues} className="form-control" idname="resource" placeholdername="Resource" />
+              <label for="location" className="col-form-label">Location</label>
+              <Textboxwithlabel mandatory="required"  fieldname="location" whenupdate={this.updateFormValues} className="form-control" idname="location" placeholdername="Location" />
             </div>
             <div className="form-group col-md-1"></div>
             <div className="form-group col-md-2">
@@ -184,35 +184,58 @@ class NewRequest extends Component {
           </div>
           <div className="form-row justify-content-md-center">
             <div className="form-group col-md-2">
-              <label for="perm_savings" className="col-form-label">Permanent Savings</label>
-              <Textboxwithlabel mandatory="required"  fieldname="perm_savings" whenupdate={this.updateFormValues} className="form-control" idname="perm_savings" placeholdername="Perm Savings" />
+              <label for="dollar_savings" className="col-form-label">Dollar Savings</label>
+              <Textboxwithlabel mandatory="required"  fieldname="dollar_savings" whenupdate={this.updateFormValues} className="form-control" idname="dollar_savings" placeholdername="Dollar Savings" />
             </div>
             <div className="form-group col-md-1"></div>
             <div className="form-group col-md-2">
-              <label for="cphp" className="col-form-label">CP/ HP/ SoW</label>
-              <Textboxwithlabel mandatory="required"  fieldname="cP_hP_hSoW" whenupdate={this.updateFormValues} className="form-control" idname="cphp" placeholdername="CP / HP/ SoW" />
+              <label for="cp_hp_sow" className="col-form-label">CP/HP/SoW</label>
+              <SelectorField  mandatory="required" fieldname="cp_hp_sow" whenupdate={this.updateFormValues} className="form-control" idname="cp_hp_sow" placeholdername="cp_hp_sow" />
+
             </div>
             <div className="form-group col-md-1"></div>
             <div className="form-group col-md-2">
               <label for="pdfile" className="col-form-label">PD File Name</label>
-              <Textboxwithlabel mandatory="required"  fieldname="pd_file_name" whenupdate={this.updateFormValues} className="form-control" idname="pdfile" placeholdername="PD File Name" />
+              <Textboxwithlabel mandatory=""  fieldname="pd_file_name" whenupdate={this.updateFormValues} className="form-control" idname="pdfile" placeholdername="PD File Name" />
             </div>
             <div className="form-group col-md-1"></div>
             <div className="form-group col-md-2">
               <label for="indicative_po_value" className="col-form-label">Indicative PO Value</label>
-              <Textboxwithlabel mandatory="required"  fieldname="indicative_po_value" whenupdate={this.updateFormValues} className="form-control" idname="indicative_po_value" placeholdername="Indicative PO Value" />
+              <Textboxwithlabel mandatory=""  fieldname="indicative_po_value" whenupdate={this.updateFormValues} className="form-control" idname="indicative_po_value" placeholdername="Indicative PO Value" />
             </div>
           </div>
-          <div className="form-row justify-content-md-center ">
-            <div className="form-group col-md-6 ">
+          <div className="form-row">
+          <div className="form-group col-md-2">
+            <label for="team_name" className="col-form-label">Team Name</label>
+              <Textboxwithlabel mandatory="required"  fieldname="team_name" whenupdate={this.updateFormValues} className="form-control" idname="team_name" placeholdername="Team Name" />
+          </div>
+          <div className="form-group col-md-1"></div>
+
+          <div className="form-group col-md-2">
+            <label for="wave" className="col-form-label">Wave</label>
+              <Textboxwithlabel mandatory="required"  fieldname="wave" whenupdate={this.updateFormValues} className="wave" idname="wave" placeholdername="Wave" />
+          </div>
+
+          <div className="form-group col-md-1"></div>
+          
+          <div className="form-group col-md-2">
+            <label for="team_name" className="col-form-label">General Manager Name</label>
+              <Textboxwithlabel mandatory="required"  fieldname="general_manager" whenupdate={this.updateFormValues} className="form-control" idname="general_manager" placeholdername="Name of General Manager" />
+          </div>
+
+          <div className="form-group col-md-1"></div>
+            <div className="form-group col-md-1">
               <label for="comments" className="col-form-label">Comments</label>
-              <Textareawithlabel fieldname="comments" whenupdate={this.updateFormValues} className="form-control" idname="comments" placeholdername="Comments" rows="3" cols="80" />
+              <Textareawithlabel fieldname="comments" whenupdate={this.updateFormValues} className="form-control" idname="comments" placeholdername="Comments" rows="3" cols="40" />
             </div>
+
           </div>
-          <div className="form-row justify-content-md-center">
-            <div className="form-group col-md-3">
-              <button type="submit" className="col-md-3 btn btn-info">Submit</button>
+          
+          <div className="form-row">
+            <div className="pull-right form-group col-md-7"> 
+              <button type="submit" className="btn btn-info">Submit</button>
             </div>
+
           </div>
         </form>
       </div>
