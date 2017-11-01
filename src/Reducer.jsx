@@ -1,12 +1,14 @@
 import {SET_LOGINSTATUS, SET_ERROR, SET_USER, LOG_OUT,SET_RESOURCEREQUESTDATA} from './Actions.jsx';
+
 import update from 'immutability-helper';
+
 const initialState = {
     loginstatus: null,
     loginData:{
-      account_01_id:null,
-      email:null,
-      account_01_oneup_manager_id:null,
-    },
+                  name:null,
+                  email:null,
+                  job_role:null
+              },
     requestdata:{
                   jobtitle:null,
                   comments:null,
@@ -30,6 +32,11 @@ const reducer = (state = initialState, action) =>
           $set: action.payload
         }
       });
+
+
+ 
+      
+
     case SET_USER:
       return update(state, {loginData:{
                                         name:{$set:action.payload.loginData.name},
@@ -41,6 +48,7 @@ const reducer = (state = initialState, action) =>
                                     }
                             }
   );
+
     case LOG_OUT:
       return update(state, {
         loginstatus: {
@@ -55,15 +63,20 @@ const reducer = (state = initialState, action) =>
         //             job_role:{$set:null}
         //           },
       });
+
       case SET_RESOURCEREQUESTDATA:
       return update(state,{requestdata:{  jobtitle:{$set:action.payload.jobtitle},
                                           comments:{$set:action.payload.comments},
                                           hiringmanager:{$set:action.payload.hiringmanager},
                                         }
+                      
                           }
                         )
+
+
     default:
       return state;
     }
 }
+
 export default reducer;

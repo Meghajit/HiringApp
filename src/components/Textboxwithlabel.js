@@ -18,16 +18,10 @@ class Textboxwithlabel extends React.Component {
            }
            
            render(){
-               let dispORnot = null;
-                if(this.props.mandatory=="required")
-                    dispORnot =  <input required type="text"  id={this.props.fieldname} value={this.state.value} onChange={this.delta} placeholder={this.props.placeholdername} ></input>
-                else
-                dispORnot = <input type="text"  id={this.props.fieldname} value={this.state.value} onChange={this.delta} placeholder={this.props.placeholdername} ></input>
                    return(
                        <div>
                            <label htmlFor={this.props.fieldName}></label>
-                           
-                           <input required type="text"  id={this.props.fieldname} value={this.state.value} onChange={this.delta} placeholder={this.props.placeholdername} ></input>
+                           <input {...this.props.mandatory} type="text"  id={this.props.fieldname} value={this.state.value} onChange={this.delta}></input>
                        </div>
            
                    );

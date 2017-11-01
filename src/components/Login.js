@@ -1,15 +1,10 @@
-import React, {Component} from 'react'
-import { Button, FormGroup, FormControl, ControlLabel, Image, Form } from "react-bootstrap";
-import {Redirect} from "react-router-dom"
-import {browserHistory} from "react-router";
-import axios from 'axios';
-import telstra from '../images/telstra-title.png';
-//=============Redux=========================
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {loadLoginstatusFromCookie} from './../Actions.jsx'
 import {login} from './../Actions.jsx';
 import { withRouter } from 'react-router-dom';
-//==============================================
+import { Button, FormGroup, FormControl, ControlLabel, Image, Form } from "react-bootstrap";
+import telstra from '../images/telstra-title.png';
 
 class Login extends Component {
   constructor(props) {
@@ -24,6 +19,7 @@ class Login extends Component {
 
   componentWillMount() 
   {  
+      
       const loadLoginstatus = this.props.loadLoginstatus;
      loadLoginstatus(); };
  
@@ -54,9 +50,10 @@ handleAlreadyLoggedIn()
     this.setState({login_id: '', password: ''});
     this.props.history.push('/dashboard');
   }
+
   render() {
     return (
-      <div >
+      <div   onLoad={this.checkLogin()}>
          <Image src={telstra} width="1400px" />
         <br/><br/>
       <Form inline align="center" >
@@ -77,10 +74,10 @@ handleAlreadyLoggedIn()
       </Button>
     </Form>
     </div>
-      
     )
   }
 }
+
 
 const mapStateToProps = function(state) {
   return {

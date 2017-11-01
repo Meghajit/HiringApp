@@ -43,17 +43,17 @@ export const login = (login_id, password) => {
                                         
                                         var newLoginData={
                                                               loginData:{
-                                                              account_01_id:response.account_01_id,
-                                                              email:login_id,
-                                                              account_01_oneup_manager_id:response.account_01_oneup_manager_id,
+                                                              name:response.name,
+                                                              email:response.email,
+                                                              job_role:response.job_role,
                           
                                                         }
                                         }
                                      dispatch(setLoginstatus(response.status));
                                      dispatch(setUser(newLoginData));
-                                     result=response.status;
+                                    result=response.status;
                                 }) ;
-            return result;
+                                return true;
           
     }
     
@@ -115,3 +115,10 @@ export const userLogOut = () => {
     cookies.remove('loginstatus');
   }
 }
+
+// export const setResourceRequestData = () = > {
+
+//   dispatch();
+
+// }
+

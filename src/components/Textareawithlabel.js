@@ -21,7 +21,7 @@ class Textareawithlabel extends React.Component {
                    return(
                        <div>
                            <label htmlFor={this.props.fieldName}></label>
-                           <textarea required rows ={this.props.rows} cols={this.props.cols} id={this.props.fieldname} value={this.state.value} onChange={this.delta}></textarea>
+                           <textarea rows ={this.props.rows} cols={this.props.cols} id={this.props.fieldname} value={this.state.value} onChange={this.delta}></textarea>
                        </div>
            
                    );

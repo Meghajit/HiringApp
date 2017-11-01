@@ -11,7 +11,11 @@
     "react-data-grid-addons": "^2.0.61",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.14",
-    "react-sidebar": "^2.3.2"
+    "react-sidebar": "^2.3.2",
+    "immutability-helper": "^2.4.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "universal-cookie": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,3 +24,4 @@
     "eject": "react-scripts eject"
   }
 }
+

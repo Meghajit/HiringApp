@@ -1,8 +1,5 @@
 import React from "react"
 import LandingPageCard from "./LandingPageCard";
-import axios from 'axios';
-import Navibar from "./Navibar"
-
 //=======Newly ADDED for Session Management
 import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -12,7 +9,7 @@ class LandingPage extends React.Component {
         super(props);
         this.state={
                         loginstatus:"",
-                        loginData:{email:"",account_01_id:"",account_01_oneup_manager_id:""}
+                        loginData:{name:"",email:"",job_role:""}
                     }
 }
 
@@ -20,6 +17,8 @@ class LandingPage extends React.Component {
  componentWillMount() 
  {    
      const loadLoginstatus = this.props.loadLoginstatus;
+     this.state.loginData=this.props.loginData;
+     alert(this.props.loginData.email);
     loadLoginstatus(); };
 
 handleLoginError() 
@@ -32,26 +31,23 @@ componentWillMount()
     if (this.props.loginstatus!=="Authenticated")
         this.handleLoginError();  }
 
-
-
  render(){
      return (
         <div class="container">
-            <div class="row" style={(this.props.loginstatus!=="Authenticated")?{display:"none"}:{display:""}}>
-    
-                    <p>LoginStatus : {this.props.loginstatus}</p>
-                    <p>Email: {this.props.loginData.email}</p>
-                    <p>account_01_id : {this.props.loginData.account_01_id}</p>
-                    <p>account_01_oneup_manager_id : {this.props.loginData.account_01_oneup_manager_id}</p>
-                  
+            <div class="row">
+                    <div className="jumbotron" style={(this.props.loginstatus!=="Authenticated")?{display:"none"}:{display:""}}>
+                    <h3>LoginStatus : {this.props.loginstatus}</h3>
+                    <h3>Name : {this.props.loginData.name}</h3>
+                    <h3>E-mail : {this.props.loginData.email}</h3>
+                    <h3>Job Role : {this.props.loginData.job_role}</h3>
             </div>
-            <br />
+            </div>
+            <br /><br />
             <div class="row">
                 <LandingPageCard  link = "/pendingApprovals"  headername="Pending Approvals" cardtitle="Pending Approvals" cardtext="Pending Approvals" buttontext="Pending Approvals" />
                 <LandingPageCard link = "/pendingRequest" headername="Pending Requests" cardtitle="Pending Requests" cardtext="Pending Request" buttontext="Pending Request" />
             </div>
-            <br />
-            
+            <br /><br />
             <div className="row">
                 <LandingPageCard headername="My Approvals" cardtitle="My Approvals" cardtext="My Approvals" buttontext="My Approvals" />
                 <LandingPageCard link = "/newRequests" headername="My Requests" cardtitle="My Requests" cardtext="My Request" buttontext="My Request" />
